@@ -187,6 +187,7 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
+ro.telephony.default_network=9,9
 
 # Media
 debug.stagefright.ccodec=1
