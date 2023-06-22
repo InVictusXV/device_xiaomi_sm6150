@@ -79,10 +79,11 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/hidl/compatibility_matrix.xml
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_SEPARATED_DTBO := true
 
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6150
-TARGET_KERNEL_CONFIG := vendor/sdmsteppe-perf_defconfig
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_KERNEL_VERSION := 4.14
+TARGET_PREBUILT_KERNEL := device/xiaomi/courbet-kernel/Image.gz-dtb
 
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x880000
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom androidboot.console=ttyMSM0
@@ -92,6 +93,7 @@ BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += kpti=off
 BOARD_KERNEL_CMDLINE += cgroup_disable=pressure
+BOARD_PREBUILT_DTBOIMAGE := device/xiaomi/raphael-kernel/dtbo.img
 
 # TARGET_KERNEL_APPEND_DTB handling
 ifeq ($(strip $(PRODUCT_USE_DYNAMIC_PARTITIONS)),true)
