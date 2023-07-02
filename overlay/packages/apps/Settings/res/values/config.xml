@@ -36,4 +36,8 @@
 
     <!-- Whether to show the Preference for Adaptive connectivity -->
     <bool name="config_show_adaptive_connectivity">false</bool>
+
+    <!--DerpFest Maintainer-->
+    <string name="maintainer_name">Aradhea (Vrasteizz)</string>
+    <string name="maintainer_telegram">https://t.me/Vrasteizz</string>
 </resources>
